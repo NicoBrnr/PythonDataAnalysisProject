@@ -16,7 +16,7 @@ def home():
 def predict():
 
     #Collect all the data of all the features of our model
-    int_features = [int(x) for x in request.form.values()]
+    int_features = [float(x) for x in request.form.values()]
     #Put them in an array for json
     final_features = [np.array(int_features)]
     #Predict the output
